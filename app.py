@@ -217,7 +217,7 @@ if uploaded_files:
     
     # Session Cache
     @st.cache_resource
-    def get_session(): return new_session("birefnet-general")
+    def get_session(): return new_session("isnet-general-use")
     session = get_session()
     
     processed_images = []
@@ -272,4 +272,5 @@ if uploaded_files:
         st.markdown("<br>", unsafe_allow_html=True)
         col_c, col_d, col_e = st.columns([1, 2, 1])
         with col_d:
+
              st.download_button("📦 TÜMÜNÜ ZIP İNDİR", zip_buf.getvalue(), "Pisi_Pack.zip", "application/zip", use_container_width=True)
